@@ -1,7 +1,10 @@
 IP:- or Internet Protocol, is the protocol that is used to define the source and destination IP address of a packet as it traverses the internet. It is often used in conjunction with other protocols such as TCP; hence, the often-used conjunction, TCP/IP.
-
+cyber security - Cybersecurity is the practice of protecting systems, networks, and data from digital attacks, unauthorized access, and damage. It involves a range of strategies, tools, and practices designed to secure devices, software, and information from various threats like hackers, malware, and phishing attacks. The goal of cybersecurity is to maintain the confidentiality, integrity, and availability (often abbreviated as CIA) of digital data and systems.
 Protocols :- Protocols are similar. A protocol simply defines a way of communication with all its rules. These rules are usually defined by an RFC (Request for Comments).
-
+Network - A network is a group of interconnected computers and devices that share resources and communicate with each other, either within a local area (LAN) or over a wide area (WAN).
+Internet - The Internet is a vast, global network of interconnected networks that allows computers and devices worldwide to communicate, share information, and access online services.
+Attacks - Attacks in cybersecurity are attempts by malicious actors to damage, steal, or gain unauthorized access to systems, data, or networks, often to disrupt services or compromise security.
+Malware - Malware is malicious software designed to harm, exploit, or take control of computers and devices. Common types include viruses, ransomware, and spyware.
 The OSI Model from a Cybersecurity Perspective
     1. APPICATIONS - EXPOIT
     2. Presentation - phishing
