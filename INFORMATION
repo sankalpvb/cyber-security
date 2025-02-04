@@ -32,7 +32,13 @@ C. Range: 192.0.0.0 to 223.255.255.0
     D (Multicast)
     Range: 224.0.0.0 to 239.255.255.255
     Purpose: Used for multicast groups, where data is sent to multiple hosts simultaneously.
+first optect are resurv for network 
+last three for network id
+last optect is host id
 
+
+if two connect they have same ip class
+and they have same a network id
 http/3:-
         1. HTTP/3 is built on top of the QUIC (Quick UDP Internet Connections) protocol, which uses UDP (User Datagram Protocol)
         2. HTTP/3 reduces the time it takes to establish a connection with a server.connection setup into a single process, reducing latency.
