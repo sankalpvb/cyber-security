@@ -6,19 +6,20 @@ what is network
 what is internet
 what is attacks
 what is malware
-
-
-
-DNS
+nmap
+DNS 
+DNS IP
+DNS details
 tcp ip
 udp
 icmp
 coman type of ports
 arp
 WHAT IS ACCTIV ATTACKS AND PASSIV ATTACKS
-
-02-09-2024
-  reconisuance
+sniffing vs spoofing diffrance
+new virson of http or https 
+classes of ip address
+ reconisuance
   active - connect with target directlly
   passiv - 
   brutforce
@@ -26,15 +27,25 @@ jon the reepar
 http request method
 https respons code
 Secure Sockets Layer (SSL)
-DNS details
+Fishing
+vishing types
+metadata use in cyber forencics
+SIEMs, Firewalls, WAFs, EDRs
+flipar 0
+rfid
+rubbar dukky
+digi sparker
+
+
+
+02-09-2024
+ 
 tarminology of ipv4
 CIDR
 OSI MODEL
 
 03-09-2024
-sniffing vs spoofing diffrance
-new virson of http or https 
-classes of ip address
+
 CIDR      
 wireless network
 itharnet 1 and 2 
@@ -47,19 +58,13 @@ publik key
 private key
 man in the midal attack hash #
 
-Fishing
-vishing types
-metadata use in cyber forencics
+
 
 simpaly larn youtube chanel for cyber securtiy
 
 soc 
 google CTF
-SIEMs, Firewalls, WAFs, EDRs
-flipar 0
-rfid
-rubbar dukky
-digi sparker
+
 DNS 
 IP DNS
 Brootforce
