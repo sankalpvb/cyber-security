@@ -82,29 +82,29 @@ A structured skill tree showing what you need to learn and how everything connec
                                     │
         ┌────────────────────────────┼───────────────────────────────┐
         │                            │                               │
- ┌──────▼───────┐             ┌──────▼────────┐               ┌──────▼────────┐
- │ Linux Basics │             │ Networking     │               │ Scripting      │
- │ • Bash       │             │ • TCP/IP       │               │ • Python       │
- │ • File perms │             │ • Ports/Proto  │               │ • Bash scripts │
- │ • Processes  │             │ • Firewalls    │               │ • Automation   │
- └──────┬───────┘             └────────┬───────┘               └──────┬────────┘
+ ┌──────▼───────┐             ┌──────▼────────┐               ┌──────▼──────────┐
+ │ Linux Basics │             │ Networking    │               │ Scripting       │
+ │ • Bash       │             │ • TCP/IP      │               │ • Python        │
+ │ • File perms │             │ • Ports/Proto │               │ • Bash scripts  │
+ │ • Processes  │             │ • Firewalls   │               │ • Automation    │
+ └──────┬───────┘             └────────┬──────┘               └────────┬────────┘
         │                               │                              │
         │                               │                              │
         ▼                               ▼                              ▼
  ┌──────────────┐             ┌────────────────┐              ┌───────────────────┐
- │ ENUMERATION  │             │ VULN ANALYSIS   │              │ EXPLOITATION      │
- │ • Nmap       │             │ • Searchsploit  │              │ • Metasploit      │
- │ • Rustscan   │             │ • CVE reading   │              │ • Manual exploits │
- │ • SMB/FTP/WEB│             │ • Service enum  │              │ • Payload craft   │
- └──────┬───────┘             └────────┬───────┘              └──────┬───────────┘
+ │ ENUMERATION  │             │ VULN ANALYSIS  │              │ EXPLOITATION      │
+ │ • Nmap       │             │ • Searchsploit │              │ • Metasploit      │
+ │ • Rustscan   │             │ • CVE reading  │              │ • Manual exploits │
+ │ • SMB/FTP/WEB│             │ • Service enum │              │ • Payload craft   │
+ └──────┬───────┘             └────────┬───────┘              └────────┬──────────┘
         │                               │                              │
         ▼                               ▼                              ▼
  ┌──────────────┐             ┌────────────────┐              ┌──────────────────────┐
  │ PRIVESC      │             │ POST-EXPLOIT   │              │ WEB EXPLOITATION     │
  │ • WinPEAS    │             │ • Hashdump     │              │ • SQLi               │
- │ • LinPEAS    │             │ • Lateral move │              │ • LFI/RFI           │
+ │ • LinPEAS    │             │ • Lateral move │              │ • LFI/RFI            │
  │ • Kernel vul │             │ • Persistence  │              │ • File Upload vulns  │
- └──────┬───────┘             └────────┬───────┘              └──────┬──────────────┘
+ └──────┬───────┘             └────────┬───────┘              └────────┬─────────────┘
         │                               │                              │
         ▼                               ▼                              ▼
  ┌──────────────────────┐      ┌────────────────────────┐     ┌──────────────────────┐
