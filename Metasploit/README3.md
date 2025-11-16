@@ -123,16 +123,16 @@ Hashes are hidden below for privacy.
 
 All screenshots from the lab are included below for visual reference.
 
-![Screenshot 1](/asset/Screenshot%202025-11-16%20094140.png)
-![Screenshot 2](/asset/Screenshot%202025-11-16%20094234.png)
+![Screenshot 1](asset/Screenshot%202025-11-16%20094140.png)
+![Screenshot 2](asset/Screenshot%202025-11-16%20094234.png)
 ![Screenshot 3](asset/Screenshot%202025-11-16%20094258.png)
 ![Screenshot 4](asset/Screenshot%202025-11-16%20094340.png)
-![Screenshot 5](Screenshot%202025-11-16%20094417.png)
-![Screenshot 6](Screenshot%202025-11-16%20094455.png)
-![Screenshot 7](Screenshot%202025-11-16%20094617.png)
-![Screenshot 8](Screenshot%202025-11-16%20094723.png)
-![Screenshot 9](Screenshot%202025-11-16%20094825.png)
-![Screenshot 10](Screenshot%202025-11-16%20094923.png)
+![Screenshot 5](asset/Screenshot%202025-11-16%20094417.png)
+![Screenshot 6](asset/Screenshot%202025-11-16%20094455.png)
+![Screenshot 7](asset/Screenshot%202025-11-16%20094617.png)
+![Screenshot 8](asset/Screenshot%202025-11-16%20094723.png)
+![Screenshot 9](asset/Screenshot%202025-11-16%20094825.png)
+![Screenshot 10](asset/Screenshot%202025-11-16%20094923.png)
 
 ## 📘 Author
 
