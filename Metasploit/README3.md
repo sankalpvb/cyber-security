@@ -123,8 +123,8 @@ Hashes are hidden below for privacy.
 
 All screenshots from the lab are included below for visual reference.
 
-![Screenshot 1](Screenshot%202025-11-16%20094140.png)
-![Screenshot 2](Screenshot%202025-11-16%20094234.png)
+![Screenshot 1](/asset/Screenshot%202025-11-16%20094140.png)
+![Screenshot 2](/asset/Screenshot%202025-11-16%20094234.png)
 ![Screenshot 3](Screenshot%202025-11-16%20094258.png)
 ![Screenshot 4](Screenshot%202025-11-16%20094340.png)
 ![Screenshot 5](Screenshot%202025-11-16%20094417.png)
