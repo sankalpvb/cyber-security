@@ -16,3 +16,7 @@ find / \( -type f -o -type l \) \
     \( -name "flag*" -o -name "*flag*" -o -name "*.flag*" \
        -o -name "root.txt" -o -name "proof.txt" -o -name "*.txt" \) \
     -readable 2>/dev/null
+
+hash
+echo "username:$to_ent:with_last." > hash.txt
+john --wordlist=/usr/share/wordlists/rockyou.txt --format=sha512crypt hash.txt
