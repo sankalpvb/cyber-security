@@ -1,0 +1,18 @@
+$(command -v python || command -v python3 || command -v python2) -c 'import pty; pty.spawn("/bin/bash")'; export TERM=xterm
+Ctrl + Z
+stty raw -echo; fg
+reset
+
+https://gtfobins.github.io/# SUDO level up cheets
+
+
+#After root
+find /root /home /opt /var /tmp /etc -type f \
+    \( -name "flag*" -o -name "*flag*" -o -name "root.txt" \) \
+    2>/dev/null
+
+checks all common hidden locations 
+find / \( -type f -o -type l \) \
+    \( -name "flag*" -o -name "*flag*" -o -name "*.flag*" \
+       -o -name "root.txt" -o -name "proof.txt" -o -name "*.txt" \) \
+    -readable 2>/dev/null
