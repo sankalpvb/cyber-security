@@ -175,12 +175,4 @@ man capabilities
 * Always enumerate with `getcap -r /`.
 * Exploit using embedded interpreters (Python/Perl) when `cap_setuid` is present.
 
----
 
-If you want, I can also create:
-✅ A PDF
-✅ A diagram
-✅ Cheat-sheet version
-✅ A complete Linux PrivEsc notes pack (.md)
-
-Just tell me!
