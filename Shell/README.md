@@ -4,7 +4,7 @@
 ## Table of Contents  
 1. [Introduction](#introduction)  
 2. [Post-Compromise Enumeration](#post-compromise-enumeration)  
-3. [SUID / GUID Binaries](#suid-guid-binaries)  
+3. [SUID / GUID Binaries](#SUID / GUID Binaries)  
 4. [Sudo Misconfigurations](#sudo-misconfigurations)  
 5. [Capabilities & File Capabilities](#capabilities-file-capabilities)  
 6. [Cron Jobs & Scheduled Tasks](#cron-jobs-and-scheduled-tasks)  
